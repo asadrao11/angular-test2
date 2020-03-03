@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-12">
+        <app-card cardTitle="User Records" blockClass="table-border-style">
+
+
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Created</th>
+                            <th>Updated</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let manufacturer of manufacturers">
+                            <th scope="row">{{manufacturer.id}}</th>
+                            <td>{{manufacturer.name}}</td>
+                            <td>{{manufacturer.createdAt}}</td>
+                            <td>{{manufacturer.updatedAt}}</td>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary" ngbTooltip="View User Details">View</button><span>&nbsp;</span>
+                                <button type="button" class="btn btn-outline-secondary" ngbTooltip="Edit User">Edit</button>
+                            </td>
+                          </tr>
+
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>mujeebkalwar.mk@gmail.com</td>
+                            <td>Admin</td>
+                            <td>12/12/2020</td>
+                            <td>12/12/2020</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" ngbTooltip="btn-primary">Active</button>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+
+
+        </app-card>
+    </div>
+</div>

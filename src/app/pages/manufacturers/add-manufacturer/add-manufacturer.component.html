@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-sm-12">
+
+    <app-card cardTitle="New Manufacturer Information" [options]="false">
+      <hr>
+      <form action="javascript:">
+        <div class="form-group">
+          <label for="inputName">Name</label>
+          <input type="text" class="form-control" id="inputName" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">Active</label>
+          </div>
+        </div>
+        <button class="btn btn-warning event-btn m-2" type="submit" (click)="onSubmitLoader()">
+          <span *ngIf="this.submitLoader" class="spinner-grow spinner-grow-sm" role="status"></span>
+          <span *ngIf="this.submitLoader" class="load-text"> Loading...</span>
+          <span *ngIf="!this.submitLoader" class="btn-text">Submit</span>
+        </button>
+      </form>
+    </app-card>
+
+
+    <app-card cardTitle="Bulk Upload Manufacturers Information" [options]="false">
+      <hr>
+
+      <div class="input-group cust-file-button">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile04" (change)="handleFileInput($event)">
+              <label class="custom-file-label" for="inputGroupFile04">{{filename}}</label>
+            </div>
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button" (click)="fileUpload()">Upload</button>
+            </div>
+      </div>
+
+    </app-card>
+
+
+  </div>
+</div>
